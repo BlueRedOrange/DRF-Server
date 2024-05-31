@@ -29,11 +29,13 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'https://127.0.0.1:8000',
-    '127.0.0.1',
-    'port-0-drf-server-1mrfs72llwumiq6o.sel5.cloudtype.app',
-]
+# ALLOWED_HOSTS = [
+#     'https://127.0.0.1:8000',
+#     '127.0.0.1',
+#     'port-0-drf-server-1mrfs72llwumiq6o.sel5.cloudtype.app',
+# ]
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
