@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'https://127.0.0.1:8000',
     '127.0.0.1',
+    'port-0-drf-server-1mrfs72llwumiq6o.sel5.cloudtype.app',
 ]
 
 
@@ -178,8 +179,8 @@ SIMPLE_JWT = {
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://localhost:3000",
     "http://127.0.0.1:8000",
+    'https://port-0-drf-server-1mrfs72llwumiq6o.sel5.cloudtype.app',
 ]
 
 STATIC_URL = '/static/'
@@ -187,3 +188,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:8000",
+    'https://port-0-drf-server-1mrfs72llwumiq6o.sel5.cloudtype.app/',
+]
