@@ -159,10 +159,10 @@ REST_AUTH = {
 }
 SITE_ID = 1
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-ACCOUNT_USERNAME_REQUIRED = False #username 필드 사용 x
+ACCOUNT_USERNAME_REQUIRED = True #username 필드 사용 x
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_EMAIL_REQUIRED = True # email 필드 사용 o
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = False # email 필드 사용 o
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'none' # 회원가입 과정에서 이메
 
 AUTHENTICATION_BACKENDS = (
@@ -194,5 +194,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
-    'https://port-0-drf-server-1mrfs72llwumiq6o.sel5.cloudtype.app/',
+    'https://port-0-drf-server-1mrfs72llwumiq6o.sel5.cloudtype.app',
 ]
