@@ -151,19 +151,19 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_AUTH = {
-'USE_JWT': True,
-'JWT_AUTH_HTTPONLY': False,
-'JWT_AUTH_COOKIE' : 'access',
-'JWT_AUTH_REFRESH_COOKIE' : "refresh_token",
-}
-SITE_ID = 1
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-ACCOUNT_USERNAME_REQUIRED = True #username 필드 사용 x
-ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_EMAIL_REQUIRED = False # email 필드 사용 o
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
-ACCOUNT_EMAIL_VERIFICATION = 'none' # 회원가입 과정에서 이메
+# REST_AUTH = {
+# 'USE_JWT': True,
+# 'JWT_AUTH_HTTPONLY': False,
+# 'JWT_AUTH_COOKIE' : 'access',
+# 'JWT_AUTH_REFRESH_COOKIE' : "refresh_token",
+# }
+# SITE_ID = 1
+# ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+# ACCOUNT_USERNAME_REQUIRED = True #username 필드 사용 x
+# ACCOUNT_UNIQUE_EMAIL = True
+# ACCOUNT_EMAIL_REQUIRED = False # email 필드 사용 o
+# ACCOUNT_AUTHENTICATION_METHOD = 'username'
+# ACCOUNT_EMAIL_VERIFICATION = 'none' # 회원가입 과정에서 이메
 
 AUTHENTICATION_BACKENDS = (
 'allauth.account.auth_backends.AuthenticationBackend',
