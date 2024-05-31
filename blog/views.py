@@ -6,10 +6,11 @@ from django.http import Http404
 # from rest_framework import status
 from rest_framework import generics, mixins
 
+from rest_framework import viewsets
 from .models import Post
 from .serializers import PostSerializer
 
-# # Create your views here.
+# Create your views here.
 # class PostListCreateAPIView(APIView):
 #     def get(self, request, format=None):
 #         posts = Post.objects.all()
@@ -72,3 +73,37 @@ class PostRetrieveUpdateDestroyAPIView(mixins.RetrieveModelMixin, mixins.UpdateM
     
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+    
+
+class PostCreateAPIView(generics.CreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostListAPIView(generics.ListAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostRetrieveAPIView(generics.RetrieveAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostUpdateAPIView(generics.UpdateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostDestroyAPIView(generics.DestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+
+class PostRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
